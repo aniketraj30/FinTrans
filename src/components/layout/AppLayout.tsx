@@ -16,6 +16,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/theme/ThemeToggle";
 import { cn } from "@/lib/utils";
 import { BarChart3, FolderKanban, FileText, Upload, Settings, Home } from "lucide-react";
 import { useMemo } from "react";
@@ -78,7 +79,8 @@ export default function AppLayout() {
             <div className="text-sm text-muted-foreground">FinTrans</div>
             <div className="h-6 w-px bg-border" />
             <h1 className="text-lg font-semibold tracking-tight">{title}</h1>
-            <div className="ml-auto">
+            <div className="ml-auto flex items-center gap-1">
+              <ThemeToggle />
               <Button size="sm" variant="outline" onClick={() => navigate("/projects")}>New Project</Button>
             </div>
           </div>

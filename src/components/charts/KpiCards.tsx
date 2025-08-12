@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const kpis = [
-  { label: "Revenue", value: "$2.4M", delta: "+8.2% MoM" },
+  { label: "Revenue", value: "₹2.4Cr", delta: "+8.2% MoM" },
   { label: "Net Profit Margin", value: "14.8%", delta: "+1.1pp" },
   { label: "ROA", value: "9.4%", delta: "+0.6pp" },
   { label: "Variance (Actual vs Budget)", value: "-3.1%", delta: "Within threshold" },

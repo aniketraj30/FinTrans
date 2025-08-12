@@ -140,7 +140,7 @@ export default function Upload() {
 
 function Metric({ label, value, suffix = "", isCurrency = false }: { label: string; value: number | undefined; suffix?: string; isCurrency?: boolean }) {
   const formatted = isCurrency && typeof value === "number"
-    ? value.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 })
+    ? value.toLocaleString("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 })
     : typeof value === "number" && isFinite(value)
     ? `${value.toFixed(1)}${suffix}`
     : "—";
