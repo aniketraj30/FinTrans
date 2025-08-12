@@ -26,9 +26,6 @@ export default function Settings() {
               <SelectItem value="Analyst">Analyst</SelectItem>
             </SelectContent>
           </Select>
-          <p className="text-sm text-muted-foreground">
-            To enforce RBAC with authentication and database policies, connect Supabase in Lovable and we’ll wire roles via a Profiles table and Row Level Security.
-          </p>
         </CardContent>
       </Card>
     </div>

@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
   SidebarProvider,
   Sidebar,
@@ -31,6 +31,7 @@ const menu = [
 
 export default function AppLayout() {
   const location = useLocation();
+  const navigate = useNavigate();
   const title = useMemo(() => {
     const found = menu.find((m) => location.pathname.startsWith(m.to));
     return found?.label ?? "FinTrans";
@@ -42,7 +43,6 @@ export default function AppLayout() {
         <SidebarHeader>
           <div className="flex items-center justify-between px-2 py-2">
             <div className="text-sm font-semibold">FinTrans</div>
-            <Badge variant="secondary">v0.1</Badge>
           </div>
           <Input placeholder="Search…" aria-label="Search" />
         </SidebarHeader>
@@ -79,7 +79,7 @@ export default function AppLayout() {
             <div className="h-6 w-px bg-border" />
             <h1 className="text-lg font-semibold tracking-tight">{title}</h1>
             <div className="ml-auto">
-              <Button size="sm" variant="outline">New Project</Button>
+              <Button size="sm" variant="outline" onClick={() => navigate("/projects")}>New Project</Button>
             </div>
           </div>
         </header>
