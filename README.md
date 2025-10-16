@@ -1,7 +1,7 @@
-💸 AI-Based Personal Finance Coach
+💼 FinTrans – Finance Transformation Tracker
 
-An AI-powered financial assistant designed to help users manage spending, track expenses, and receive intelligent financial insights in real time.
-This project combines Node.js, FastAPI, and OpenAI APIs to deliver personalized financial recommendations, secure data handling, and real-time analytics — all hosted on AWS for scalability and reliability.
+A robust financial transaction tracking system designed to process large-scale financial data with real-time analytics, anomaly detection, and high reliability.
+This project uses Node.js, Python (FastAPI), and SQL to deliver seamless tracking of 5,000+ daily records with <200 ms latency — ensuring accuracy, compliance, and performance in financial auditing and reporting.
 
 📌 Table of Contents
 
@@ -27,51 +27,52 @@ Contact
 
 📖 About
 
-The AI-Based Personal Finance Coach helps users make smarter financial decisions using AI-driven analytics.
-It automates tracking expenses, identifying anomalies, and providing personalized advice — powered by OpenAI models and secure backend APIs.
+FinTrans simplifies financial operations by automating transaction tracking, enabling faster audits, and ensuring data accuracy through intelligent anomaly detection.
+It integrates a microservices architecture for fault tolerance and uses machine learning for data insights — all while maintaining compliance and scalability.
 
 The system integrates:
 
-Node.js and FastAPI microservices for backend orchestration
+Node.js and FastAPI for backend APIs and distributed services
 
-AWS for deployment and monitoring
+SQL databases for structured transaction data
 
-Prometheus and CloudWatch for performance tracking
+NGINX for load balancing
 
-OAuth2 for user authentication and privacy
+Docker & CI/CD pipelines for scalable deployment
 
 ✨ Features
 
-💬 Personalized financial insights and recommendations
-📊 Real-time expense tracking and analytics
-🧠 AI-based anomaly detection for unusual transactions
-🔐 End-to-end encrypted user authentication (OAuth2)
-⚡ Cloud-native backend with high availability and <200ms latency
-📈 Monitoring with Prometheus & AWS CloudWatch
+📊 Automated transaction processing for 5,000+ daily records
+⚡ Real-time financial data ingestion with <200 ms latency
+🧠 ML-powered anomaly and fraud detection
+🧩 Microservices-based architecture with NGINX load balancing
+🔄 CI/CD pipelines for continuous deployment and monitoring
+🔐 Compliance-ready with secure authentication and logging
 
 🧩 Architecture
-+-------------+      +-------------------+      +-------------------+      +------------------+
-|  Frontend   | -->  |  API Gateway (Node) | --> |  AI Engine (FastAPI) | --> |  Analytics DB   |
-+-------------+      +-------------------+      +-------------------+      +------------------+
-                                                        ↑
-                                                        |
-                                                [User Financial Data]
++-------------+     +-------------------+     +-------------------+     +-------------------+
+|  Frontend   | --> |  API Gateway      | --> |  Microservices     | --> |  SQL Database     |
++-------------+     +-------------------+     +-------------------+     +-------------------+
+                                            ↑
+                                            |
+                                     [ML Anomaly Detection]
 
 🛠 Tech Stack
 
 Frontend: React, Tailwind CSS, Vite
 Backend: Node.js, FastAPI, Express.js
-Database: PostgreSQL, MongoDB
-AI / NLP: OpenAI (GPT-3.5-turbo), Python-based models
-DevOps & Cloud: AWS ECS, Lambda, Docker, Kubernetes, GitHub Actions
-Monitoring: Prometheus, CloudWatch
+Database: PostgreSQL, MySQL
+AI / ML: Scikit-learn, Pandas, Python ML models
+DevOps & Cloud: Docker, Kubernetes, AWS ECS, GitHub Actions
+Load Balancer: NGINX
+Testing & Monitoring: PyTest, Jest, Postman, Prometheus
 Version Control: Git, GitHub
 Python Version: 3.10+
 
 🚀 Getting Started
 1️⃣ Clone the Repository
-git clone https://github.com/aniketraj30/AI-Based-Personal-Finance-Coach
-cd AI-Based-Personal-Finance-Coach
+git clone https://github.com/aniketraj30/FinTrans
+cd FinTrans
 
 2️⃣ Install Requirements
 pip install -r requirements.txt
@@ -81,11 +82,12 @@ npm install
 
 Create a .env file in the root directory and add:
 
-OPENAI_API_KEY=your_openai_api_key
-AWS_ACCESS_KEY=your_aws_key
-AWS_SECRET_KEY=your_aws_secret
+DB_HOST=your_database_host
+DB_USER=your_user
+DB_PASSWORD=your_password
+DB_NAME=fintrans_db
 
-4️⃣ Run the Backend (FastAPI + Node.js)
+4️⃣ Run the Backend Services
 uvicorn app:app --reload
 node server.js
 
@@ -98,43 +100,38 @@ npm run dev
 
 🧠 How It Works
 
-1️⃣ User Input: The user enters income, expenses, or asks for financial guidance.
-2️⃣ Data Processing: Backend validates and categorizes financial data.
-3️⃣ AI Analysis: OpenAI APIs analyze spending patterns and generate insights.
-4️⃣ Response: Personalized recommendations and visual analytics are shown in the frontend dashboard.
+1️⃣ Data Input: Transactions are uploaded or received from financial sources.
+2️⃣ Processing: Backend services validate, clean, and store data securely.
+3️⃣ ML Analysis: Models detect anomalies and generate audit insights.
+4️⃣ Dashboard: Users can visualize transaction patterns and reports in real time.
 
 📚 Dataset
 
-Data is user-generated, securely stored, and processed in compliance with privacy policies.
-Training and insights are based on:
+FinTrans processes both real and synthetic datasets:
 
-Publicly available financial behavior datasets
+Simulated financial transaction logs
 
-Synthetic user data for model fine-tuning
+Labeled data for fraud/anomaly detection
 
-Encrypted storage formats (PostgreSQL + AWS S3)
+Stored in SQL and cached in Redis for quick retrieval
 
 ⚠️ Challenges Faced
 
-Balancing model accuracy with user privacy
+Maintaining low latency for large-scale data ingestion
 
-Handling large-scale, real-time transaction streams
+Designing fault-tolerant microservices under heavy load
 
-Reducing API latency under high load
+Ensuring audit compliance and transaction integrity
 
-Implementing robust anomaly detection with limited labeled data
+Integrating ML inference without performance degradation
 
 🚧 Future Scope
 
-💬 Conversational financial chatbot integration
-
-🌐 Multi-currency and regional tax rule support
-
-📱 Mobile-first frontend (Flutter or React Native)
-
-🤝 Integration with bank APIs (Plaid, Razorpay, etc.)
-
-🧩 Advanced visualization with AI-driven financial forecasting
+📈 Integration with banking APIs (Plaid, Razorpay, Stripe)
+🤖 Automated financial forecasting with LLMs
+📱 Mobile-first dashboard with real-time alerts
+💾 Data lake integration for long-term analytics
+🧾 Role-based admin panel for auditors and finance teams
 
 📬 Contact
 
