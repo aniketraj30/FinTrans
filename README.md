@@ -1,66 +1,147 @@
-Welcome to your Project
-Project Info
-URL: <YOUR_PROJECT_URL>
+💸 AI-Based Personal Finance Coach
 
-How Can I Edit This Code?
-There are several ways to edit your application:
+An AI-powered financial assistant designed to help users manage spending, track expenses, and receive intelligent financial insights in real time.
+This project combines Node.js, FastAPI, and OpenAI APIs to deliver personalized financial recommendations, secure data handling, and real-time analytics — all hosted on AWS for scalability and reliability.
 
-Use Your Preferred IDE
-To work locally:
+📌 Table of Contents
 
-Make sure you have Node.js & npm installed (install with nvm)
+About
 
-text
-# Step 1: Clone the repository using your project's Git URL.
-git clone <YOUR_GIT_URL>
+Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Architecture
 
-# Step 3: Install the necessary dependencies.
-npm i
+Tech Stack
 
-# Step 4: Start the development server with auto-reloading and instant preview.
+Getting Started
+
+How It Works
+
+Dataset
+
+Challenges Faced
+
+Future Scope
+
+Contact
+
+📖 About
+
+The AI-Based Personal Finance Coach helps users make smarter financial decisions using AI-driven analytics.
+It automates tracking expenses, identifying anomalies, and providing personalized advice — powered by OpenAI models and secure backend APIs.
+
+The system integrates:
+
+Node.js and FastAPI microservices for backend orchestration
+
+AWS for deployment and monitoring
+
+Prometheus and CloudWatch for performance tracking
+
+OAuth2 for user authentication and privacy
+
+✨ Features
+
+💬 Personalized financial insights and recommendations
+📊 Real-time expense tracking and analytics
+🧠 AI-based anomaly detection for unusual transactions
+🔐 End-to-end encrypted user authentication (OAuth2)
+⚡ Cloud-native backend with high availability and <200ms latency
+📈 Monitoring with Prometheus & AWS CloudWatch
+
+🧩 Architecture
++-------------+      +-------------------+      +-------------------+      +------------------+
+|  Frontend   | -->  |  API Gateway (Node) | --> |  AI Engine (FastAPI) | --> |  Analytics DB   |
++-------------+      +-------------------+      +-------------------+      +------------------+
+                                                        ↑
+                                                        |
+                                                [User Financial Data]
+
+🛠 Tech Stack
+
+Frontend: React, Tailwind CSS, Vite
+Backend: Node.js, FastAPI, Express.js
+Database: PostgreSQL, MongoDB
+AI / NLP: OpenAI (GPT-3.5-turbo), Python-based models
+DevOps & Cloud: AWS ECS, Lambda, Docker, Kubernetes, GitHub Actions
+Monitoring: Prometheus, CloudWatch
+Version Control: Git, GitHub
+Python Version: 3.10+
+
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/aniketraj30/AI-Based-Personal-Finance-Coach
+cd AI-Based-Personal-Finance-Coach
+
+2️⃣ Install Requirements
+pip install -r requirements.txt
+npm install
+
+3️⃣ Set Up Environment Variables
+
+Create a .env file in the root directory and add:
+
+OPENAI_API_KEY=your_openai_api_key
+AWS_ACCESS_KEY=your_aws_key
+AWS_SECRET_KEY=your_aws_secret
+
+4️⃣ Run the Backend (FastAPI + Node.js)
+uvicorn app:app --reload
+node server.js
+
+
+Visit API docs at:
+👉 http://localhost:8000/docs
+
+5️⃣ Run the Frontend
 npm run dev
-Edit Files Directly in GitHub
-Navigate to the desired file(s).
 
-Click the "Edit" button (pencil icon) at the top right of the file view.
+🧠 How It Works
 
-Make your changes and commit them directly.
+1️⃣ User Input: The user enters income, expenses, or asks for financial guidance.
+2️⃣ Data Processing: Backend validates and categorizes financial data.
+3️⃣ AI Analysis: OpenAI APIs analyze spending patterns and generate insights.
+4️⃣ Response: Personalized recommendations and visual analytics are shown in the frontend dashboard.
 
-Use GitHub Codespaces
-Navigate to the main page of your repository.
+📚 Dataset
 
-Click the "Code" button near the top right.
+Data is user-generated, securely stored, and processed in compliance with privacy policies.
+Training and insights are based on:
 
-Select the "Codespaces" tab and click "New codespace."
+Publicly available financial behavior datasets
 
-Edit files inside Codespaces, then commit and push your changes.
+Synthetic user data for model fine-tuning
 
-Technologies Used
-This project is built with:
+Encrypted storage formats (PostgreSQL + AWS S3)
 
-Vite
+⚠️ Challenges Faced
 
-TypeScript
+Balancing model accuracy with user privacy
 
-React
+Handling large-scale, real-time transaction streams
 
-shadcn-ui
+Reducing API latency under high load
 
-Tailwind CSS
+Implementing robust anomaly detection with limited labeled data
 
-Deployment
-You can deploy this project using your preferred hosting platform, such as Vercel, Netlify, or GitHub Pages.
+🚧 Future Scope
 
-Connect a Custom Domain
-To connect a custom domain:
+💬 Conversational financial chatbot integration
 
-Go to your hosting provider's domain settings.
+🌐 Multi-currency and regional tax rule support
 
-Add your domain and update DNS records to point to your hosting service.
+📱 Mobile-first frontend (Flutter or React Native)
 
-Confirm the connection after DNS propagation.
+🤝 Integration with bank APIs (Plaid, Razorpay, etc.)
 
-Refer to your hosting provider’s documentation for a step-by-step guide.
+🧩 Advanced visualization with AI-driven financial forecasting
+
+📬 Contact
+
+Aniket Raj
+📞 +91 7979024295
+📧 rjaniket30@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/aniket-raj-3a8410231/
+
+💻 GitHub: https://github.com/aniketraj30
